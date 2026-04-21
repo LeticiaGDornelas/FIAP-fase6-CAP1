@@ -1,14 +1,14 @@
 <div align="center">
 
 <a href="https://www.fiap.com.br/">
-  <img alt="FIAP - Faculdade de Informática e Administração Paulista" src="assets/logo-fiap.png" width="160px">
+  <img alt="FIAP - Faculdade de Informática e Administração Paulista" src="assets/logo-fiap (1).png" width="160px">
 </a>
 
 </div>
 
 <br>
 
-# 🐄🐑 FarmTech Solutions — Visão Computacional para Monitoramento de Rebanho
+# FarmTech Solutions — Visão Computacional para Monitoramento de Rebanho
 
 ## Grupo MultiAgents
 
