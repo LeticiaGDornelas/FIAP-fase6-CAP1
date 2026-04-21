@@ -62,7 +62,6 @@ GrupoMultiAgents_fase6/
 │   ├── cnn_curves.png
 │   └── comparison_chart.png
 ├── document/             # Documentos de apoio
-│   └── enunciado_fase6.pdf
 ├── src/                  # Código-fonte principal
 │   └── GrupoMultiAgents_pbl_fase6.ipynb   ← NOTEBOOK PRINCIPAL
 ├── scripts/              # Scripts auxiliares
