@@ -1,14 +1,14 @@
 <div align="center">
 
 <a href="https://www.fiap.com.br/">
- <img alt="FIAP - Faculdade de Informática e Administração Paulista" src="assets/logo-fiap (1).png" width="160px">
+  <img alt="FIAP - Faculdade de Informática e Administração Paulista" src="assets/logo-fiap.png" width="160px">
 </a>
 
 </div>
 
 <br>
 
-# FarmTech Solutions — Visão Computacional para Monitoramento de Rebanho
+# 🐄🐑 FarmTech Solutions — Visão Computacional para Monitoramento de Rebanho
 
 ## Grupo MultiAgents
 
@@ -16,11 +16,11 @@
 
 ## 👨‍🎓 Integrantes
 
-- [Laura de Andrade Castilho] — RM568507]
-- [Leticia Grossi Dornelas — RM568172]
-- [Leonardo Borges Alves da Mota — RM566939]
-- [Bernardo Naves Doti Avelar — RM566867]
-- [David Eduardo da Silva Correia — RM567525]
+- [Laura de Andrade Castilho — RM568507](https://www.linkedin.com/in/)
+- [Leticia Grossi Dornelas — RM568172](https://www.linkedin.com/in/leticiagdornelas/)
+- [Leonardo Borges Alves da Mota — RM566939](https://www.linkedin.com/in/leonardo-borges-alves-da-mota-649703177/)
+- [Bernardo Naves Doti Avelar — RM566867](https://www.linkedin.com/in/bernardo-doti/)
+- [David Eduardo da Silva Correia — RM567525](https://www.linkedin.com/in/eduardo-correia-29327631/)
 
 ---
 
@@ -44,7 +44,7 @@ O objetivo central foi construir um **sistema de visão computacional** capaz de
 2. **YOLO Padrão** — uso direto do modelo pré-treinado no COCO, sem customização
 3. **CNN do Zero** — rede convolucional desenvolvida manualmente em PyTorch para classificação binária
 
-O dataset utilizado é público e disponível no Roboflow Universe ([Farm Animals — XDream](https://universe.roboflow.com/xdream/farm-animals-hv6qi)), com imagens de vacas e ovelhas já anotadas em formato YOLOv5.
+O dataset utilizado é o **COCO 2017** (Microsoft), acessado via biblioteca FiftyOne, filtrado para as classes `cow` e `sheep` com 100 imagens públicas. As imagens foram convertidas para o formato YOLOv5 e divididas em treino, validação e teste.
 
 Foram realizadas **duas simulações com épocas diferentes (30 e 60)** para o YOLOv5 customizado, comparando convergência, acurácia e desempenho. Ao final, uma análise crítica compara as três abordagens em termos de facilidade de uso, precisão, tempo de treino e tempo de inferência.
 
@@ -53,9 +53,10 @@ Foram realizadas **duas simulações com épocas diferentes (30 e 60)** para o Y
 ## 📁 Estrutura de Pastas
 
 ```
-GrupoMultiAgents_fase6/
+FIAP-fase6-CAP1/
 ├── .github/              # Configurações do GitHub
 ├── assets/               # Imagens e recursos visuais do projeto
+│   ├── logo-fiap.png
 │   ├── samples_dataset.png
 │   ├── compare_30_60.png
 │   ├── detections_test.png
@@ -74,19 +75,20 @@ GrupoMultiAgents_fase6/
 
 | Item | Detalhe |
 |------|---------|
-| **Fonte** | [Roboflow Universe — Farm Animals (XDream)](https://universe.roboflow.com/xdream/farm-animals-hv6qi) |
+| **Fonte** | [COCO 2017 — Microsoft](https://cocodataset.org) via [FiftyOne Zoo](https://docs.voxel51.com/user_guide/dataset_zoo/datasets.html) |
 | **Classes** | `cow` (vaca) e `sheep` (ovelha) |
+| **Total de imagens** | 100 imagens (split de validação do COCO) |
 | **Formato** | YOLOv5 PyTorch (.txt + data.yaml) |
-| **Licença** | Público (Roboflow Universe) |
+| **Licença** | Público — CC BY 4.0 |
 
 **Distribuição das imagens:**
 
-| Split | cow | sheep | Total |
-|-------|-----|-------|-------|
-| Treino | 32 | 32 | 64 |
-| Validação | 4 | 4 | 8 |
-| Teste | 4 | 4 | 8 |
-| **Total** | **40** | **40** | **80** |
+| Split | Proporção | Total aprox. |
+|-------|-----------|-------------|
+| Treino | 80% | ~80 imagens |
+| Validação | 10% | ~10 imagens |
+| Teste | 10% | ~10 imagens |
+| **Total** | **100%** | **100 imagens** |
 
 ---
 
@@ -94,18 +96,13 @@ GrupoMultiAgents_fase6/
 
 ### Pré-requisitos
 - Conta Google (para uso do Google Colab)
-- Conta gratuita no [Roboflow](https://app.roboflow.com) para obter a API key
-- GPU recomendada (Colab gratuito com T4 é suficiente)
+- GPU recomendada (Colab gratuito com T4 é suficiente — **não precisa de API key**)
 
 ### Passo a Passo
 
 **1. Abrir o notebook no Google Colab**
 
-Clique no botão abaixo ou acesse diretamente:
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SEU_USUARIO/GrupoMultiAgents_fase6/blob/main/src/GrupoMultiAgents_pbl_fase6.ipynb)
-
-> ⚠️ Substitua `SEU_USUARIO` pelo nome do usuário GitHub do grupo após fazer o upload.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LeticiaGDornelas/FIAP-fase6-CAP1/blob/main/src/GrupoMultiAgents_pbl_fase6.ipynb)
 
 **2. Ativar GPU no Colab**
 
@@ -113,47 +110,39 @@ Clique no botão abaixo ou acesse diretamente:
 Menu: Ambiente de execução → Alterar tipo de ambiente de execução → GPU (T4)
 ```
 
-**3. Obter API Key do Roboflow (gratuito)**
-
-- Acesse [app.roboflow.com](https://app.roboflow.com)
-- Vá em Settings → API Keys → copie sua chave
-- Substitua `"YOUR_API_KEY"` na célula de download do dataset
-
-**4. Executar todas as células em ordem**
+**3. Executar todas as células em ordem**
 
 ```
 Menu: Ambiente de execução → Executar tudo (Ctrl+F9)
 ```
 
 O notebook executará automaticamente:
-- Download do dataset
-- Treinamento YOLOv5 (30 épocas)
-- Treinamento YOLOv5 (60 épocas)
+- Download do dataset COCO (cow + sheep) via FiftyOne
+- Conversão para formato YOLOv5
+- Treinamento YOLOv5 customizado (30 épocas)
+- Treinamento YOLOv5 customizado (60 épocas)
 - Inferência e validação
-- Treinamento CNN do zero
+- Treinamento CNN do zero (30 épocas)
 - Comparação e análise final
 
 ### Tempo estimado de execução total
 
 | Etapa | Tempo (Colab T4) |
 |-------|-----------------|
-| Instalação + Download | ~5 min |
+| Instalação + Download COCO | ~10 min |
 | Treino YOLOv5 30 épocas | ~15 min |
 | Treino YOLOv5 60 épocas | ~30 min |
 | CNN do zero 30 épocas | ~10 min |
-| **Total** | **~60 min** |
+| **Total** | **~65 min** |
 
 ---
 
 ## 📊 Resultados Resumidos
 
-### YOLOv5 Customizado — 60 épocas (melhor modelo)
-
-| Métrica | Valor |
-|---------|-------|
-| mAP@0.5 | ≥ 0.80 |
-| Precisão | ≥ 0.85 |
-| Recall | ≥ 0.80 |
+### Ambiente de Execução
+- **GPU:** Tesla T4
+- **PyTorch:** 2.10.0+cu128
+- **CUDA:** 13.0
 
 ### Comparação Final
 
@@ -164,6 +153,7 @@ O notebook executará automaticamente:
 | Tempo de treino | ~30 min | Zero | ~10 min |
 | Localiza objeto? | ✅ Sim | ✅ Sim | ❌ Não |
 | Multi-objeto por frame? | ✅ Sim | ✅ Sim | ❌ Não |
+| Precisa de API key? | ❌ Não | ❌ Não | ❌ Não |
 
 ---
 
@@ -176,6 +166,7 @@ O notebook executará automaticamente:
 ## 🗃️ Histórico de Lançamentos
 
 - 1.0.0 — Entrega Final Fase 6 (2025.2)
+  - Dataset COCO 2017 (cow + sheep) via FiftyOne
   - YOLOv5 customizado (30 e 60 épocas)
   - YOLO padrão aplicado
   - CNN treinada do zero
