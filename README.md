@@ -8,7 +8,7 @@
 
 <br>
 
-# 🐄🐑 FarmTech Solutions — Visão Computacional para Monitoramento de Rebanho
+# FarmTech Solutions — Visão Computacional para Monitoramento de Rebanho
 
 ## Grupo MultiAgents
 
