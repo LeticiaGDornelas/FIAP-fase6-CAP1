@@ -159,7 +159,7 @@ O notebook executará automaticamente:
 
 ## 🎥 Vídeo Demonstrativo
 
-> 📹 Link do vídeo no YouTube (não listado): **[a ser inserido após gravação]**
+> 📹 Link do vídeo no YouTube (não listado): https://youtu.be/wgea-uAlyH8?si=yvUVOg-qrTTvKF5j
 
 ---
 
